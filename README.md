@@ -132,18 +132,4 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-**License & Contact**
-
-Specify your preferred license here. For questions, contact the project owner or maintainer.
-
----
-
-If you want, I can also:
-
-- add a `.gitignore` entry for `service_account.json`
-- extract dependency names into a short header from `requirements.txt`
-- add usage examples with sample CLI flags based on the scripts' arguments
-
----
-
 Last updated: 2026-06-08
