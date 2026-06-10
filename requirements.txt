@@ -2,3 +2,6 @@ gspread
 oauth2client
 requests
 twilio
+streamlit
+pandas
+python-dotenv
