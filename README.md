@@ -61,6 +61,19 @@ pip install -r requirements.txt
 
 - Place your credentials in `service_account.json` at the project root. The project expects a JSON service account key with sufficient permissions for the operations performed by `main.py` and `get_ids.py`.
 - Ensure the file is never committed to a public repository. Add `service_account.json` to `.gitignore` if you version-control this project.
+- Configure dashboard access with environment variables. You can define two approved users with either of these formats:
+  - `LEADFLOW_AUTH_USER_1` and `LEADFLOW_AUTH_PASSWORD_1`
+  - `LEADFLOW_AUTH_USER_2` and `LEADFLOW_AUTH_PASSWORD_2`
+- Alternatively, set a single `LEADFLOW_AUTH_USERS` variable containing JSON like:
+
+```json
+[
+  { "username": "admin", "password": "secret-1" },
+  { "username": "ops", "password": "secret-2" }
+]
+```
+
+- If no auth users are configured, the dashboard stops at the login screen and shows a setup error instead of loading data.
 
 **Usage**
 
@@ -107,7 +120,7 @@ If you need precise behavior, open the corresponding files and review their docs
   - Metric for success: number of automated runs vs manual runs.
   - Outcome: more consistent, auditable lead processing and simpler handoffs.
 
-*(The above impact points follow a three-part structure — problem, measurable metric, and expected outcome — to clearly emphasize value.)*
+_(The above impact points follow a three-part structure — problem, measurable metric, and expected outcome — to clearly emphasize value.)_
 
 **Security & Secrets**
 

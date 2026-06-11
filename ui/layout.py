@@ -1,7 +1,10 @@
 import streamlit as st
 
-def render_header():
+def configure_page():
     st.set_page_config(page_title="LeadFlow Admin Engine", layout="wide")
+
+
+def render_header():
     st.markdown(
         """
         <style>
@@ -24,6 +27,41 @@ def render_header():
             padding-top: 2rem;
             padding-bottom: 2rem;
             max-width: 1320px;
+        }
+
+        section[data-testid="stSidebar"] {
+            background:
+                radial-gradient(circle at 18% 8%, rgba(34, 197, 94, 0.12), transparent 34%),
+                linear-gradient(180deg, rgba(8, 8, 8, 0.98), rgba(5, 5, 5, 1));
+            border-right: 1px solid rgba(34, 197, 94, 0.14);
+        }
+
+        section[data-testid="stSidebar"] .block-container {
+            padding-top: 1.2rem;
+        }
+
+        .leadflow-sidebar-user-card {
+            border-radius: 0.95rem;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            background: linear-gradient(180deg, rgba(12, 12, 12, 0.96), rgba(7, 7, 7, 0.98));
+            padding: 0.8rem 0.85rem;
+            margin-bottom: 0.7rem;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+        }
+
+        .leadflow-sidebar-user-label {
+            margin: 0;
+            color: #84f3a4;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .leadflow-sidebar-user-name {
+            margin: 0.3rem 0 0;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 700;
         }
 
         header[data-testid="stHeader"] {

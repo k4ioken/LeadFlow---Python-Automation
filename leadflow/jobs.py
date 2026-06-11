@@ -28,7 +28,7 @@ def run_daily_nudge(target_org="All Pending"):
 
         org_matches = (target_org == "All Pending") or (organization.lower() == target_org.lower())
 
-        if status == "Pending" and (follow_up_date == today or follow_up_date <= today) and org_matches:
+        if status == "Pending" and follow_up_date <= today and org_matches:
             display_org = organization if organization else "our team"
             message_body = (
                 f"Hi {lead_name}, this is an automated follow-up from {display_org}.\n\n"
