@@ -63,7 +63,7 @@ if not df.empty:
                     st.text(l)
                 # clear cache so the table updates
                 st.cache_data.clear()
-                st.experimental_rerun()
+                st.rerun()
             else:
                 st.info("No pending leads matched the selection and date criteria today.")
 else:
